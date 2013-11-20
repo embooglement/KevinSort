@@ -30,7 +30,7 @@ void kevin_sort(ForwardIter begin_iter, ForwardIter end_iter)
 	
 	auto time = std::chrono::system_clock::now().time_since_epoch().count();
 	std::default_random_engine engine(static_cast<std::default_random_engine::result_type>(time));
-	std::uniform_int_distribution<typename duration::rep> distribution(duration::min().count(), duration::max().count());
+	std::uniform_int_distribution<typename duration::rep> distribution(duration::zero().count(), duration::max().count());
 
 	while (!std::is_sorted(begin_iter, end_iter))
 	{
