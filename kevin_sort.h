@@ -15,7 +15,7 @@
 #include <chrono>
 #include <mutex>
 
-class debug_duration : std::chrono::milliseconds
+class debug_duration : public std::chrono::milliseconds
 {
 public:
 	constexpr debug_duration(rep value) : std::chrono::milliseconds(value) { }

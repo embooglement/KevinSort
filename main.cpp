@@ -13,7 +13,7 @@ int main(int argc, const char * argv[])
 {
 	std::vector<int> v = { 3, 2, 1 };
 	
-	kevin_sort(std::begin(v), std::end(v));
+	kevin_sort<debug_duration>(std::begin(v), std::end(v));
 	
 	std::cout << "Is sorted: " << std::boolalpha << std::is_sorted(std::begin(v), std::end(v)) << std::endl;
 
